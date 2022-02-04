@@ -5,8 +5,6 @@ month = gets.chomp.to_i
 puts "Input year(number YYYY:)"
 year = gets.chomp.to_i
 
-
-
 # define leap year check
 def leap_year?(year)
     (year % 4 == 0) && !(year % 100 == 0) || (year % 400 == 0)
@@ -28,9 +26,6 @@ def date_check(day, month)
        true
     end
 end
-
-# add day from input to sum of days from inputed month
-
 
 # check if date is right and puts output
 if date_check(day, month) == false

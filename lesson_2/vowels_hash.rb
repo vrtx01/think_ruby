@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
 alphabet = ('a'..'z').to_a
 vowels = ('aeiouy').split(//)
-result = Hash.new
+result = {}
 
 alphabet.map.with_index do |letter, index|
-  if vowels.include?(letter)
-    result[letter] = index + 1
-  end
+  result[letter] = index + 1 if vowels.include?(letter)
 end
 
 puts result
+

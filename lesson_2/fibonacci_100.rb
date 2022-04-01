@@ -14,4 +14,3 @@ def fibonacci(num)
 end
 
 print(1..100).map { |i| fibonacci(i) } # Write first 100 Fibonacci numbers in array.
-

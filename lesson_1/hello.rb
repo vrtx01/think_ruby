@@ -1,7 +1,9 @@
-puts "Как тебя зовут?"
+# frozen_string_literal: true
+
+puts 'Как тебя зовут?'
 name = gets.chomp
 
-puts "В каком году ты родился?"
+puts 'В каком году ты родился?'
 year = gets.chomp
 
 puts "#{name}, привет! Тебе примерно #{2022 - year.to_i}."

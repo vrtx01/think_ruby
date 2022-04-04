@@ -9,12 +9,12 @@ year = gets.chomp.to_i
 
 # define leap year check
 def leap_year?(year)
-  (year % 4.zero?) && !(year % 100.zero?) || (year % 400.zero?)
+  (year % 4).zero? && !(year % 100).zero? || (year % 400).zero?
 end
 
 # array of days in month with leap february
 days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-days_in_month[1] = 29 if leap_year?(year) == true
+days_in_month[1] = 29.to_i if leap_year?(year) == true
 
 # check if date is inputed right
 def date_check(day, month)
@@ -32,5 +32,5 @@ if date_check(day, month) == false
   puts 'There is no such date! Try another.'
 else
   day_of_year = day + days_in_month.take(month - 1).sum
-  puts "In #{year} year order of that day is:#{day_of_year}"
+  puts "In #{year} order of that day in year is:#{day_of_year}"
 end
